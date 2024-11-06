@@ -1,0 +1,17 @@
+$color-main--dark: #63a60f;
+$color-main--light: #e0edcf;
+$color-main--lighter: #eff6e7;
+$color-title: #121212;
+$color-text--main: #505050;
+$color-text-second: #ffffff;
+$color-warning: #cf3e3b;
+$color-background: #31352b;
+$color-btn--hover: #4d800c;
+$color-hit: #ff7a00;
+$color-like--hover: #ffb800;
+
+%bg {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
