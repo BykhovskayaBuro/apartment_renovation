@@ -1,0 +1,93 @@
+@use "../variables" as *;
+
+.header {
+  &__nav {
+    padding: 23px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__logo {
+    margin-right: 47px;
+    transition: all 0.3s;
+    &:focus {
+      background-color: rgba(255, 255, 255, 0.0001);
+      box-shadow: 0px 0px 0px 3px $color-accent;
+    }
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+    margin-right: 46px;
+  }
+
+  &__link {
+    font-size: 16px;
+    color: inherit;
+    transition: all 0.3s;
+
+    // &:visited {
+    //   color: $color-link--hover;
+    // }
+
+    &:hover {
+      color: $color-link--hover;
+      text-decoration: underline;
+    }
+
+    // &:active {
+    //   color: $color-link--hover;
+    // }
+  }
+
+  &__phone {
+    font-weight: 700;
+    font-size: 18px;
+    padding-bottom: 5px;
+    color: inherit;
+    text-align: right;
+    position: relative;
+
+    width: 100%;
+    &::before {
+      content: "";
+      position: absolute;
+      background-image: url("../images/svg/phone.svg");
+      width: 18px;
+      height: 18px;
+      top: 3px;
+      left: 0;
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    margin-right: 33px;
+  }
+
+  &__schedule {
+    display: block;
+  }
+
+  &__btn {
+    border: 1px solid $color-accent;
+    border-radius: 3px;
+    font-weight: 500;
+    font-size: 16px;
+    color: $color-accent;
+    padding: 13px 22px;
+    transition: all 0.3s;
+    &:hover {
+      background-color: $color-accent;
+      color: #fff;
+    }
+  }
+}

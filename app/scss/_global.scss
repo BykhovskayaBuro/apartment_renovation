@@ -1,3 +1,5 @@
+@use "variables" as *;
+
 .sr-only {
   position: absolute;
   width: 1px;
@@ -20,41 +22,41 @@ body {
   display: flex;
   flex-direction: column;
   background-color: #ffffff;
-  font-family: "OpenSans", sans-serif;
+  font-family: $font-family, sans-serif;
   font-weight: 400;
   font-size: 14px;
   line-height: 1.4;
-  color: $color-text--main;
+  color: color-text--main;
 }
 
 .container {
-  max-width: 1320px;
+  max-width: 1240px;
   margin: 0 auto;
-  padding: 0 15px;
+  padding: 0 20px;
 }
 
-.button-close {
-  position: absolute;
-  top: 20px;
-  right: 13px;
-  background-position: center center;
-  background-repeat: no-repeat;
-  width: 50px;
-  height: 50px;
-  border-radius: 3px;
-  transition: background-color 0.3s;
-  &:hover {
-    background-color: $color-main--light;
-    path {
-      fill: $color-main--dark;
-    }
-  }
+// .button-close {
+//   position: absolute;
+//   top: 20px;
+//   right: 13px;
+//   background-position: center center;
+//   background-repeat: no-repeat;
+//   width: 50px;
+//   height: 50px;
+//   border-radius: 3px;
+//   transition: background-color 0.3s;
+//   &:hover {
+//     background-color: $color-main--light;
+//     path {
+//       fill: $color-main--dark;
+//     }
+//   }
 
-  &:focus {
-    box-shadow: 0px 0px 0px 3px $color-main--lighter;
-  }
+//   &:focus {
+//     box-shadow: 0px 0px 0px 3px $color-main--lighter;
+//   }
 
-  &:active {
-    background-color: rgba(193, 193, 193, 0.3);
-  }
-}
+//   &:active {
+//     background-color: rgba(193, 193, 193, 0.3);
+//   }
+// }

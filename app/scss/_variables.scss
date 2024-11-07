@@ -1,0 +1,19 @@
+// colors
+$color-accent: #6cac3d;
+$color-accent--second: #2d4872;
+$color-text--main: #171616;
+$color-btn--hover: #82c054;
+$color-btn--active: #52971f;
+$color-additional--dark: #c4c4c4;
+$color-additional--light: #f2f2f2;
+$color-link--hover: #234875;
+
+// fonts
+$font-family: "Roboto", sans-serif;
+$second-family: "Saira Stencil One", sans-serif;
+
+%bg {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
