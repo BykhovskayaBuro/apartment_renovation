@@ -47,34 +47,10 @@
     // }
   }
 
-  &__phone {
-    font-weight: 700;
-    font-size: 18px;
-    padding-bottom: 5px;
-    color: inherit;
-    text-align: right;
-    position: relative;
-
-    width: 100%;
-    &::before {
-      content: "";
-      position: absolute;
-      background-image: url("../images/svg/phone.svg");
-      width: 18px;
-      height: 18px;
-      top: 3px;
-      left: 0;
-    }
-  }
-
   &__info {
     display: flex;
     flex-direction: column;
     margin-right: 33px;
-  }
-
-  &__schedule {
-    display: block;
   }
 
   &__btn {

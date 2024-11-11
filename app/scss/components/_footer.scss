@@ -1,1 +1,45 @@
 @use "../variables" as *;
+
+.footer {
+  padding: 52px 0 27px;
+  background-color: $color-footer--background;
+  color: $color-text--second;
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 30px;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 13px;
+    text-transform: uppercase;
+    color: $color-accent;
+    margin-bottom: 15px;
+  }
+
+  &__pay {
+    font-size: 13px;
+    color: $color-footer--text;
+  }
+
+  &__col1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__col2 {
+    & a {
+      font-size: 13px;
+      color: $color-footer--text;
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    color: $color-footer--text;
+  }
+}

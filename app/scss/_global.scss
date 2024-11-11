@@ -60,3 +60,30 @@ body {
 //     background-color: rgba(193, 193, 193, 0.3);
 //   }
 // }
+
+//
+
+// reused blocks
+
+.phone {
+  font-weight: 700;
+  font-size: 18px;
+  padding-bottom: 5px;
+  color: inherit;
+  text-align: right;
+  position: relative;
+  width: 100%;
+  &::before {
+    content: "";
+    position: absolute;
+    background-image: url("../images/svg/phone.svg");
+    width: 18px;
+    height: 18px;
+    top: 3px;
+    left: 0;
+  }
+}
+
+.schedule {
+  display: block;
+}
