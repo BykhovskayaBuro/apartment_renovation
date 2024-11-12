@@ -20,3 +20,8 @@ $second-family: "Saira Stencil One", sans-serif;
   background-size: cover;
   background-repeat: no-repeat;
 }
+
+%before_after {
+  content: "";
+  position: absolute;
+}
