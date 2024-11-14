@@ -9,7 +9,14 @@
 
   &::before {
     @extend %before_after;
-    bottom: 25%;
+    bottom: 25&::before {
+      @extend %before_after;
+      top: 0;
+      left: 0;
+      height: 1px;
+      width: 100%;
+      background-color: $color-footer--text;
+    }%;
     left: 0;
     height: 1px;
     width: 100%;
