@@ -94,3 +94,24 @@ body {
 .schedule {
   display: block;
 }
+
+input[type="radio"] {
+  display: none;
+}
+
+.custom-radio {
+  margin-right: 10px;
+  background-image: url(../images/svg/radio_btn.svg);
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  display: inline-block;
+}
+
+input[type="radio"]:checked + .custom-radio {
+  background-image: url("../images/svg/radio_btn--checked.svg");
+}
+
+label > input[type="radio"]:checked {
+  color: $color-accent--second;
+}

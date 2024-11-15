@@ -49,74 +49,123 @@
         <div class="container">
           <nav class="about__nav">
             <ul class="navigation">
-              <li class="navigation__item">Ремонт квартир</li>
-              <li class="navigation__item">Дизайн интерьера</li>
-              <li class="navigation__item">Ремонт комнат</li>
-              <li class="navigation__item">Дома и коттеджи</li>
-              <li class="navigation__item">Прочие услуги</li>
+              <li class="navigation__item">
+                <a class="navigation__link" href="#">Ремонт квартир</a>
+                <span class="navigation__arrow"></span>
+              </li>
+              <li class="navigation__item">
+                <a class="navigation__link" href="#">Дизайн интерьера</a>
+                <span class="navigation__arrow"></span>
+              </li>
+              <li class="navigation__item">
+                <a class="navigation__link" href="#">Ремонт комнат</a>
+                <span class="navigation__arrow"></span>
+              </li>
+              <li class="navigation__item">
+                <a class="navigation__link" href="#">Дома и коттеджи</a>
+              </li>
+              <li class="navigation__item">
+                <a class="navigation__link" href="#">Прочие услуги</a>
+              </li>
             </ul>
           </nav>
           <div class="about__wrap">
-            <h1 class="about__title">РЕМОНТ КВАРТИР В МОСКВЕ И МО</h1>
-            <p class="about__text">от <span>2450</span> руб/м2</p>
-            <ul class="about__list">
-              <li class="about__item">Оплата по факту приема работ</li>
-              <li class="about__item">Замер и составление сметы БЕСПЛАТНО</li>
-              <li class="about__item">Выезд сметчика</li>
-              <li class="about__item">Гарантия 3 года</li>
-            </ul>
+            <div class="about__left">
+              <h1 class="about__title">РЕМОНТ КВАРТИР В МОСКВЕ И МО</h1>
+              <p class="about__text">от <span>2450</span> руб/м2</p>
+              <ul class="about__list">
+                <li class="about__item about__item--pay">
+                  Оплата по факту приема работ
+                </li>
+                <li class="about__item about__item--measure">
+                  Замер и составление сметы БЕСПЛАТНО
+                </li>
+                <li class="about__item about__item--estimator">
+                  Выезд сметчика
+                </li>
+                <li class="about__item about__item--guarantee">
+                  Гарантия 3 года
+                </li>
+              </ul>
+            </div>
             <div class="about__calc calc">
               <h4 class="calc__title">РАССЧИТАЙТЕ стоимость ремонта</h4>
               <form class="calc__form" action="#">
-                <div class="calc__type">
-                  <span>Вид ремонта:</span>
+                <fieldset class="calc__type">
+                  <legend>Вид ремонта:</legend>
                   <label for="cosmetic"
-                    ><input id="cosmetic" type="radio" name="cosmetic" />
-                    Косметический</label
+                    ><input
+                      id="cosmetic"
+                      type="radio"
+                      name="cosmetic"
+                      checked
+                    />
+                    <span class="custom-radio"></span> Косметический</label
                   >
                   <label for="capital"
-                    ><input id="capital" type="radio" name="cosmetic" />
+                    ><input id="capital" type="radio" name="cosmetic" /><span
+                      class="custom-radio"
+                    ></span>
                     Капитальный</label
                   >
                   <label for="key"
-                    ><input id="key" type="radio" name="cosmetic" /> Под
-                    ключ</label
+                    ><input id="key" type="radio" name="cosmetic" /><span
+                      class="custom-radio"
+                    ></span>
+                    Под ключ</label
                   >
                   <label for="design"
-                    ><input id="design" type="radio" name="cosmetic" />
+                    ><input id="design" type="radio" name="cosmetic" /><span
+                      class="custom-radio"
+                    ></span>
                     Дизайнерский</label
                   >
-                </div>
-                <div class="calc__real">
-                  Тип вашей недвижимости:
+                </fieldset>
+                <fieldset class="calc__real">
+                  <legend>Тип вашей недвижимости:</legend>
                   <label for="new"
-                    ><input id="new" type="radio" name="realType" />
-                    Новостройка</label
+                    ><input id="new" type="radio" name="realType" checked />
+                    <span class="custom-radio"></span>Новостройка</label
                   >
                   <label for="second"
-                    ><input id="seond" type="radio" name="realType" />
-                    Дизайнерский</label
+                    ><input id="second" type="radio" name="realType" /><span
+                      class="custom-radio"
+                    ></span>
+                    Вторичное жилье</label
                   >
-                </div>
-                <div class="calc__rooms">
-                  Количество комнат
+                </fieldset>
+                <fieldset class="calc__rooms">
+                  <legend>Количество комнат</legend>
                   <label for="one_room"
-                    ><input id="one_room" type="radio" name="roomQuantity" />
-                    1</label
+                    ><input
+                      id="one_room"
+                      type="radio"
+                      name="roomQuantity"
+                      checked
+                    /><span class="custom-radio"></span> 1</label
                   >
                   <label for="two_room"
-                    ><input id="two_room" type="radio" name="roomQuantity" />
-                    2</label
+                    ><input
+                      id="two_room"
+                      type="radio"
+                      name="roomQuantity"
+                    /><span class="custom-radio"></span> 2</label
                   >
                   <label for="three_room"
-                    ><input id="three_room" type="radio" name="roomQuantity" />
-                    3</label
+                    ><input
+                      id="three_room"
+                      type="radio"
+                      name="roomQuantity"
+                    /><span class="custom-radio"></span> 3</label
                   >
                   <label for="four_room"
-                    ><input id="four_room" type="radio" name="roomQuantity" />
-                    4</label
+                    ><input
+                      id="four_room"
+                      type="radio"
+                      name="roomQuantity"
+                    /><span class="custom-radio"></span> 4</label
                   >
-                </div>
+                </fieldset>
                 <div class="calc__square">
                   Площадь, м2:
                   <input type="range" />
@@ -572,13 +621,14 @@
         </div>
       </section>
       <section class="opinions">
-        <h2 class="opinions__title title">Отзывы</h2>
-        <ul class="opinions__list">
-          <li class="opinions__item">
-            <video class="opinions__video" src=""></video>
-            
-          </li>
-        </ul>
+        <div class="container">
+          <h2 class="opinions__title title">Отзывы</h2>
+          <ul class="opinions__list">
+            <li class="opinions__item">
+              <video class="opinions__video" src=""></video>
+            </li>
+          </ul>
+        </div>
       </section>
     </main>
     <footer class="footer">
