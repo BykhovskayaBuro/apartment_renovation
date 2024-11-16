@@ -118,4 +118,4 @@ function watching() {
 }
 
 export const build = series(cleanDist, images, buildDist);
-export const start = parallel(styles, scripts, serve, watching);
+export const start = parallel(styles, scripts, server, watching);
