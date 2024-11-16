@@ -1,0 +1,191 @@
+@use "../variables" as *;
+
+.about {
+  height: 100vh;
+  background-image: url("../images/about_bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-bottom: 150px;
+  &__wrap {
+    position: relative;
+  }
+
+  &__calc {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40vw;
+    border-radius: 7px;
+  }
+
+  &__left {
+    max-width: 43vw;
+    width: 100%;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 60px;
+    margin-bottom: 31px;
+    padding-top: 30px;
+    text-transform: uppercase;
+  }
+
+  &__text {
+    font-weight: 700;
+    font-size: 44px;
+    margin-bottom: 68px;
+
+    & span {
+      font-size: 60px;
+      color: $color-text--second;
+      border-radius: 10px;
+      background-color: $color-accent;
+      padding: 0 7px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 25px 75px;
+  }
+
+  &__item {
+    font-weight: 700;
+    font-size: 18px;
+    position: relative;
+    padding-top: 75px;
+    max-width: 14vw;
+    width: 100%;
+    &::before {
+      content: "";
+      position: absolute;
+      width: 60px;
+      height: 60px;
+      top: 0;
+      left: 0;
+      @extend %bg;
+    }
+
+    &--pay::before {
+      background-image: url("../images/svg/hands.svg");
+    }
+
+    &--measure::before {
+      background-image: url("../images/svg/smeta.svg");
+    }
+
+    &--estimator::before {
+      height: 64px;
+      background-image: url("../images/svg/worker.svg");
+    }
+
+    &--guarantee::before {
+      background-image: url("../images/svg/guarantee.svg");
+    }
+  }
+}
+
+.calc {
+  background-color: $color-text--second;
+  padding: 38px 24px 42px 55px;
+  color: $color-text--calculator;
+  width: 461px;
+
+  &__title {
+    font-weight: 900;
+    font-size: 20px;
+    text-transform: uppercase;
+    margin-bottom: 28px;
+    color: $color-text--main;
+  }
+
+  & legend {
+    font-weight: 700;
+    font-size: 16px;
+    margin-bottom: 19px;
+  }
+
+  & fieldset:not(:last-child) {
+    border: none;
+    margin-bottom: 18px;
+    border-bottom: 1px solid #d6d6d6;
+  }
+
+  & label {
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+  }
+
+  &__rooms {
+    & label {
+      padding-right: 23px;
+    }
+  }
+
+  &__wrap {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    & label {
+      margin-bottom: 11px;
+    }
+  }
+
+  &__type {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    padding-bottom: 18px;
+  }
+
+  &__real {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding-bottom: 18px;
+  }
+
+  &__rooms {
+    display: flex;
+    padding-bottom: 18px;
+  }
+
+  &__info {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    background-color: $color-additional--light;
+    padding: 17px 0 18px;
+  }
+
+  &__item {
+    font-size: 16px;
+    color: $color-accent--second;
+    & span {
+      display: block;
+      font-weight: 700;
+      font-size: 18px;
+    }
+  }
+
+  &__contact {
+    margin-top: 19px;
+    display: flex;
+    align-items: center;
+    border: none;
+  }
+
+  &__phone {
+    padding: 12px 13px;
+    border: 1px solid #cccccc;
+    max-width: 200px;
+    width: 100%;
+    margin-right: 15px;
+  }
+
+  &__submit {
+    padding-right: 31px;
+    padding-left: 31px;
+  }
+}

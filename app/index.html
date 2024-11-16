@@ -1,12 +1,752 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="css/style.min.css" rel="stylesheet" />
-    <title>Document</title>
+    <title>Apartment renovation in Moscow</title>
   </head>
   <body>
+    <header class="header">
+      <div class="container">
+        <nav class="header__nav">
+          <a class="logo header__logo" href="#">
+            <img src="images/svg/logo_dark.svg" alt="Max Proff logo" />
+          </a>
+          <ul class="header__list">
+            <li class="header__item">
+              <a class="header__link" href="#">Цены</a>
+            </li>
+            <li class="header__item">
+              <a class="header__link" href="#">Услуги</a>
+            </li>
+            <li class="header__item">
+              <a class="header__link" href="#">Портфолио</a>
+            </li>
+            <li class="header__item">
+              <a class="header__link" href="#">Акции</a>
+            </li>
+            <li class="header__item">
+              <a class="header__link" href="#">Преимущества</a>
+            </li>
+            <li class="header__item">
+              <a class="header__link" href="#">Блог</a>
+            </li>
+            <li class="header__item">
+              <a class="header__link" href="#">Контакты</a>
+            </li>
+          </ul>
+          <div class="header__info">
+            <a class="phone" href="tel:+72332222222">+7 (233) 222-22-22</a>
+            <span class="schedule">08:00 - 22:00, без выходных</span>
+          </div>
+          <a class="header__btn" href="#">Заказать звонок</a>
+        </nav>
+        <nav class="header__navigation">
+          <ul class="navigation">
+            <li class="navigation__item">
+              <a class="navigation__link" href="#">Ремонт квартир</a>
+              <span class="navigation__arrow"></span>
+            </li>
+            <li class="navigation__item">
+              <a class="navigation__link" href="#">Дизайн интерьера</a>
+              <span class="navigation__arrow"></span>
+            </li>
+            <li class="navigation__item">
+              <a class="navigation__link" href="#">Ремонт комнат</a>
+              <span class="navigation__arrow"></span>
+            </li>
+            <li class="navigation__item">
+              <a class="navigation__link" href="#">Дома и коттеджи</a>
+            </li>
+            <li class="navigation__item">
+              <a class="navigation__link" href="#">Прочие услуги</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main class="main">
+      <section class="about">
+        <div class="container">
+          <div class="about__wrap">
+            <div class="about__left">
+              <h1 class="about__title">РЕМОНТ КВАРТИР В МОСКВЕ И МО</h1>
+              <p class="about__text">от <span>2450</span> руб/м2</p>
+              <ul class="about__list">
+                <li class="about__item about__item--pay">
+                  Оплата по факту приема работ
+                </li>
+                <li class="about__item about__item--measure">
+                  Замер и составление сметы БЕСПЛАТНО
+                </li>
+                <li class="about__item about__item--estimator">
+                  Выезд сметчика
+                </li>
+                <li class="about__item about__item--guarantee">
+                  Гарантия 3 года
+                </li>
+              </ul>
+            </div>
+            <div class="about__calc calc">
+              <h4 class="calc__title">РАССЧИТАЙТЕ стоимость ремонта</h4>
+              <form class="calc__form" action="#">
+                <fieldset class="calc__type">
+                  <legend>Вид ремонта:</legend>
+                  <label for="cosmetic"
+                    ><input
+                      id="cosmetic"
+                      type="radio"
+                      name="cosmetic"
+                      checked
+                    />
+                    <span class="custom-radio"></span> Косметический</label
+                  >
+                  <label for="capital"
+                    ><input id="capital" type="radio" name="cosmetic" /><span
+                      class="custom-radio"
+                    ></span>
+                    Капитальный</label
+                  >
+                  <label for="key"
+                    ><input id="key" type="radio" name="cosmetic" /><span
+                      class="custom-radio"
+                    ></span>
+                    Под ключ</label
+                  >
+                  <label for="design"
+                    ><input id="design" type="radio" name="cosmetic" /><span
+                      class="custom-radio"
+                    ></span>
+                    Дизайнерский</label
+                  >
+                </fieldset>
+                <fieldset class="calc__real">
+                  <legend>Тип вашей недвижимости:</legend>
+                  <label for="new"
+                    ><input id="new" type="radio" name="realType" checked />
+                    <span class="custom-radio"></span>Новостройка</label
+                  >
+                  <label for="second"
+                    ><input id="second" type="radio" name="realType" /><span
+                      class="custom-radio"
+                    ></span>
+                    Вторичное жилье</label
+                  >
+                </fieldset>
+                <fieldset class="calc__rooms">
+                  <legend>Количество комнат</legend>
+                  <label for="one_room"
+                    ><input
+                      id="one_room"
+                      type="radio"
+                      name="roomQuantity"
+                      checked
+                    /><span class="custom-radio"></span> 1</label
+                  >
+                  <label for="two_room"
+                    ><input
+                      id="two_room"
+                      type="radio"
+                      name="roomQuantity"
+                    /><span class="custom-radio"></span> 2</label
+                  >
+                  <label for="three_room"
+                    ><input
+                      id="three_room"
+                      type="radio"
+                      name="roomQuantity"
+                    /><span class="custom-radio"></span> 3</label
+                  >
+                  <label for="four_room"
+                    ><input
+                      id="four_room"
+                      type="radio"
+                      name="roomQuantity"
+                    /><span class="custom-radio"></span> 4</label
+                  >
+                </fieldset>
+                <fieldset class="calc__square">
+                  <legend>Площадь, м2:</legend>
+                  <input type="range" />
+                </fieldset>
+                <ul class="calc__info">
+                  <li class="calc__item">
+                    Срок ремонта: <span>до 34 дней</span>
+                  </li>
+                  <li class="calc__item">
+                    Скидка составит: <span>23 765 руб</span>
+                  </li>
+                </ul>
+                <fieldset class="calc__contact">
+                  <legend>Введите номер телефона</legend>
+                  <input
+                    id="phone"
+                    class="calc__phone"
+                    type="phone"
+                    placeholder="+7"
+                  />
+                  <input
+                    class="calc__submit btn"
+                    type="submit"
+                    value="Заказать"
+                  />
+                </fieldset>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="price">
+        <div class="container">
+          <h2 class="price__title title">Цены на ремонт</h2>
+          <ul class="price__list">
+            <li class="price__item">
+              <div class="price__top">Косметический <span>от 5 дней</span></div>
+              <p class="price__text">
+                Такой тип ремонта подойдёт для того чтобы «освежить» ремонт в
+                квартире: заменить покрытие стен, пола и потолка без
+                предварительной подготовки
+              </p>
+              <ul class="price__services">
+                <li class="price__service">
+                  Демонтаж
+                  <ul class="price__subservices">
+                    <li class="price__subservice">Демонтаж старых покрытий</li>
+                    <li class="price__subservice">Демонтаж старой электрики</li>
+                  </ul>
+                </li>
+                <li class="price__service">
+                  Черновые работы
+                  <ul class="price__subservices">
+                    <li class="price__subservice">Грунтовка стен и пола</li>
+                  </ul>
+                </li>
+                <li class="price__service price__service--notActive">
+                  Чистовые работы
+                </li>
+              </ul>
+              <button class="price__work">Список работ</button>
+              <span class="price__old">от 3 245 руб/м2</span>
+              <span class="price__new">от 2 450 руб/м2</span>
+              <button class="price__btn btn">Получить смету</button>
+            </li>
+          </ul>
+          <ul class="price__list">
+            <li class="price__item">
+              <div class="price__top">Капитальный <span>от 14 дней</span></div>
+              <p class="price__text">
+                Такой тип ремонта подойдет, если требкеться отремонтировать
+                квартиру: выровнять стены, сделать стяжку полов, проложить
+                инженерию и выполнить чистовую отделку.
+              </p>
+              <ul class="price__services">
+                <li class="price__service">
+                  Демонтаж
+                  <ul class="price__subservices">
+                    <li class="price__subservice">Демонтаж старых покрытий</li>
+                    <li class="price__subservice">Демонтаж старой электрики</li>
+                  </ul>
+                </li>
+                <li class="price__service">
+                  Черновые работы
+                  <ul class="price__subservices">
+                    <li class="price__subservice">Грунтовка стен и пола</li>
+                    <li class="price__subservice">
+                      Шпатлевка и штукатурка стен
+                    </li>
+                    <li class="price__subservice price__subservice--notActive">
+                      Устройство наливных полов
+                    </li>
+                  </ul>
+                </li>
+                <li class="price__service price__service--notActive">
+                  Чистовые работы
+                </li>
+              </ul>
+              <button class="price__work">Список работ</button>
+              <span class="price__old">от 5 445 руб/м2</span>
+              <span class="price__new">от 4 950 руб/м2</span>
+              <button class="price__btn btn">Получить смету</button>
+            </li>
+          </ul>
+          <ul class="price__list">
+            <li class="price__item">
+              <div class="price__top">Под ключ <span>от 11 дней</span></div>
+              <p class="price__text">
+                Ремонт класса «евро» — капитальный ремонт с применением
+                современных отделочных материалов и стандартов, включающий
+                перепланировку.
+              </p>
+              <ul class="price__services">
+                <li class="price__service">
+                  Демонтаж
+                  <ul class="price__subservices">
+                    <li class="price__subservice">Демонтаж старых покрытий</li>
+                    <li class="price__subservice">Демонтаж старой электрики</li>
+                    <li class="price__subservice">Демонтаж дверей</li>
+                  </ul>
+                </li>
+                <li class="price__service">
+                  Черновые работы
+                  <ul class="price__subservices">
+                    <li class="price__subservice">Грунтовка стен и пола</li>
+                    <li class="price__subservice price__subservice--notActive">
+                      Шпатлевка и штукатурка стен
+                    </li>
+                  </ul>
+                </li>
+                <li class="price__service price__service--notActive">
+                  Чистовые работы
+                </li>
+              </ul>
+              <button class="price__work">Список работ</button>
+              <span class="price__old">от 5 995 руб/м2</span>
+              <span class="price__new">от 5 450 руб/м2</span>
+              <button class="price__btn btn">Получить смету</button>
+            </li>
+          </ul>
+          <ul class="price__list">
+            <li class="price__item">
+              <div class="price__top">Дизайнерский <span>от 20 дней</span></div>
+              <p class="price__text">
+                Дизайнерский ремонт ориентирован для настоящих ценителей
+                комфорта, эстетики и внутреннего удобства.
+              </p>
+              <ul class="price__services">
+                <li class="price__service">
+                  Демонтаж
+                  <ul class="price__subservices">
+                    <li class="price__subservice">Демонтаж старых покрытий</li>
+                    <li class="price__subservice">Демонтаж старой электрики</li>
+                    <li class="price__subservice">Демонтаж дверей</li>
+                  </ul>
+                </li>
+                <li class="price__service">
+                  Черновые работы
+                  <ul class="price__subservices">
+                    <li class="price__subservice">Грунтовка стен и пола</li>
+                    <li class="price__subservice price__subservice--notActive">
+                      Шпатлевка и штукатурка стен
+                    </li>
+                  </ul>
+                </li>
+                <li class="price__service price__service--notActive">
+                  Чистовые работы
+                </li>
+              </ul>
+              <button class="price__work">Список работ</button>
+              <span class="price__old">от 9 800 руб/м2</span>
+              <span class="price__new">от 7 500 руб/м2</span>
+              <button class="price__btn btn">Получить смету</button>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="example">
+        <div class="container">
+          <h2 class="example__title title">Примеры наших работ</h2>
+          <ul class="example__list">
+            <li class="example__item">Капитальный</li>
+            <li class="example__item">Косметиеский</li>
+            <li class="example__item">Под ключ</li>
+            <li class="example__item">Студии</li>
+            <li class="example__item">Черновой</li>
+          </ul>
+          <div class="example__squere">
+            <input type="radio" name="metr" id="55m2" value="55 м2" />
+            <input type="radio" name="metr" id="61m2" value="61 м2" />
+            <input type="radio" name="metr" id="72m2" value="72 м2" />
+            <input type="radio" name="metr" id="88m2" value="88 м2" />
+            <input type="radio" name="metr" id="106m2" value="106 м2" />
+            <input type="radio" name="metr" id="63m2" value="63 м2" />
+            <input type="radio" name="metr" id="41m2" value="41 м2" />
+          </div>
+          <div class="slider">
+            <div class="slider__item">
+              <ul class="slider__mini">
+                <li>
+                  <img
+                    class="slider__img-mini"
+                    src="images/slider_mini_1.jpg"
+                    alt="Interier first view"
+                  />
+                </li>
+                <li>
+                  <img
+                    class="slider__img-mini"
+                    src="images/slider_mini_1.jpg"
+                    alt="Interier first view"
+                  />
+                </li>
+                <li>
+                  <img
+                    class="slider__img-mini"
+                    src="images/slider_mini_1.jpg"
+                    alt="Interier first view"
+                  />
+                </li>
+                <li>
+                  <img
+                    class="slider__img-mini"
+                    src="images/slider_mini_1.jpg"
+                    alt="Interier first view"
+                  />
+                </li>
+                <li>
+                  <img
+                    class="slider__img-mini"
+                    src="images/slider_mini_1.jpg"
+                    alt="Interier first view"
+                  />
+                </li>
+              </ul>
+              <div class="slider__inner">
+                <img src="images/slider_1.jpg" alt="Interier first view" />
+                <div class="slider__descr">
+                  <ul class="slider__data">
+                    <li class="slider__point slider__point--sum">
+                      Сумма: 272 250 руб.
+                    </li>
+                    <li class="slider__point slider__point--squere">
+                      Площадь: 43 м2
+                    </li>
+                    <li class="slider__point slider__point--deadline">
+                      Срок: 90 дней
+                    </li>
+                    <li class="slider__point slider__point--room">Комнат: 3</li>
+                    <li class="slider__point slider__point--address">
+                      Адрес: Кулика 18
+                    </li>
+                    <li class="slider__point slider__point--list">
+                      <ul>
+                        Перечень работ:
+                        <li>Штукатурка стен по маякам</li>
+                        <li>Грунтовка стен и потолка</li>
+                        <li>Монтаж натяжных потолков</li>
+                        <li>Шпатлёвка стен под обои</li>
+                        <li>Окраске стен</li>
+                        <li>Укладка плитки в с/у</li>
+                        <li>Прокладка электрики</li>
+                        <li>Установка плинтусов и откосов</li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <button class="slider__btn btn">Оставить заявку</button>
+          </div>
+        </div>
+      </section>
+      <section class="sale">
+        <div class="container">
+          <h2 class="sale__title title">Акции</h2>
+          <ul class="sale__list">
+            <li class="sale__item">
+              <a
+                class="sale__link"
+                href="#"
+                style="background-image: url('images/sale_new_flat.jpg')"
+              >
+                <h3 class="sale__subtitle">Новоселам</h3>
+                <p class="sale__descr">
+                  Специальная скидка для тех кто переехал не более года назад
+                </p>
+                <button class="sale__get btn">Получить скидку</button>
+              </a>
+            </li>
+            <li class="sale__item">
+              <a
+                class="sale__link"
+                href="#"
+                style="background-image: url('images/sale_new_family.jpg')"
+              >
+                <h3 class="sale__subtitle">Молодоженам</h3>
+                <p class="sale__descr">
+                  Специальная скидка если с момента регистрации прошло не более
+                  года
+                </p>
+                <button class="sale__get btn">Получить скидку</button>
+              </a>
+            </li>
+            <li class="sale__item">
+              <a
+                class="sale__link"
+                href="#"
+                style="background-image: url('images/sale_retire.jpg')"
+              >
+                <h3 class="sale__subtitle">Пенсионерам</h3>
+                <p class="sale__descr">Специальная скидка для наших дорогих</p>
+                <button class="sale__get btn">Получить скидку</button>
+              </a>
+            </li>
+          </ul>
+          <a class="sale__btn btn--light" href="#">Все акции</a>
+        </div>
+      </section>
+      <section class="approach">
+        <div class="container">
+          <h2 class="approach__title title">Как мы работаем</h2>
+          <p class="approach__descr">
+            Вам понятен каждый этап: фиксированные сроки и цены, предоставляем
+            все документы: накладные, гарантии, акты. Вы будете уверены в
+            результате.
+          </p>
+          <ul class="approach__list">
+            <li class="approach__item">Бесплатный выезд замерщика</li>
+            <li class="approach__item">Смета в день обращения</li>
+            <li class="approach__item">Договор</li>
+            <li class="approach__item">Накладные материалы</li>
+            <li class="approach__item">
+              Контроль: фотоотчёт или видеонаблюдение
+            </li>
+            <li class="approach__item">Акт выполненных работ</li>
+            <li class="approach__item">Акт приемки работ по договору</li>
+            <li class="approach__item">Гарантия на выполненные работы</li>
+          </ul>
+        </div>
+      </section>
+      <section class="showroom">
+        <div class="container">
+          <h2 class="showroom__title title">
+            Свой склад и шоурум материалов наших партнеров в Москве
+          </h2>
+          <ul class="showroom__list">
+            <li class="showromm__item">Прямой договор с поставщиками</li>
+            <li class="showromm__item">Доставка и подьём в квартиру</li>
+            <li class="showromm__item">
+              300 тонн черновых и чистовых материалов
+            </li>
+            <li class="showromm__item">
+              250 видов обоев 25 видов ламината 50 видов плитки и плинтуса
+            </li>
+            <li class="showromm__item">
+              Выезд специалиста с каталогом материалов
+            </li>
+          </ul>
+          <div class="showroom__images">
+            <img src="images/cloth_1.jpg" alt="Cloth" />
+            <img src="images/cloth_2.jpg" alt="Cloth" />
+          </div>
+        </div>
+      </section>
+      <section class="control">
+        <div class="container">
+          <h2 class="control__title title">Многоуровневый контроль качества</h2>
+          <p class="control__descr">
+            Ремонтируем квартиры без дефектов благодаря многоуровневому контролю
+            качества:
+          </p>
+          <div class="control__wrap">
+            <img src="images/masters.jpg" alt="Proffesional workers" />
+            <ul class="control__list">
+              <li class="control__item">
+                <span class="control__num"
+                  ><span class="control__accent">01</span>/05</span
+                >
+                <p class="control__subtitle">Главный инженер</p>
+                <p class="control__text">
+                  Наблюдает за работой в режиме реального времени. Проверяет
+                  поставщиков материалов и оборудования
+                </p>
+              </li>
+              <li class="control__item">
+                <span class="control__num"
+                  ><span class="control__accent">02</span>/05</span
+                >
+                <p class="control__subtitle">Отдел технического конроля</p>
+                <p class="control__text">
+                  Проверяет качество работ на всех объектах-решает спорные
+                  ситуации
+                </p>
+              </li>
+              <li class="control__item">
+                <span class="control__num"
+                  ><span class="control__accent">03</span>/05</span
+                >
+                <p class="control__subtitle">Видео и фото контроль</p>
+                <p class="control__text">Онлайн-контроль хода ремонта 24/7</p>
+              </li>
+              <li class="control__item">
+                <span class="control__num"
+                  ><span class="control__accent">04</span>/05</span
+                >
+                <p class="control__subtitle">Начальник участка</p>
+                <p class="control__text">
+                  Оценивает соответствие процесса ремонта условиям договора по
+                  срокам и стоимости.
+                </p>
+              </li>
+              <li class="control__item">
+                <span class="control__num"
+                  ><span class="control__accent">05</span>/05</span
+                >
+                <p class="control__subtitle">Прораб</p>
+                <p class="control__text">
+                  Приезжает на объект 4-5 раз в неделю, контролирует работу
+                  мастеров. Проверяет каждый этап по 120 пунктам соответсвия.
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section class="advantages">
+        <div class="container">
+          <h2 class="advantages__title title">Наши преимущества</h2>
+          <ul class="advantages__list">
+            <li class="advantages__item">
+              <p class="advantages__subtitle">Работа без предоплаты</p>
+              <p class="advantages__subtitle">
+                Мы не берём предоплату. Вы платите за каждый этап работ после
+                подписания акта.
+              </p>
+            </li>
+            <li class="advantages__item">
+              <p class="advantages__subtitle">Стоимость ремонта не меняется</p>
+              <p class="advantages__subtitle">
+                Прозрачный бюджет. Финальная смета фиксируется в согласованных
+                актах.
+              </p>
+            </li>
+            <li class="advantages__item">
+              <p class="advantages__subtitle">
+                Мастера-славяне с опытом от 5 лет
+              </p>
+              <p class="advantages__subtitle">
+                Мастера - славяне. В штате 250 мастеров с опытом работы от 5
+                лет, 20 прорабов с опытом от 8 лет и инженерным образованием.
+              </p>
+            </li>
+            <li class="advantages__item">
+              <p class="advantages__subtitle">За нами не переделывают</p>
+              <p class="advantages__subtitle">
+                Качество работ для нас в приоритете. Даём гарантию на все виды
+                работ.
+              </p>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="opinions">
+        <div class="container">
+          <h2 class="opinions__title title">Отзывы</h2>
+          <ul class="opinions__list">
+            <li class="opinions__item">
+              <video class="opinions__video" src=""></video>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__top">
+          <div class="footer__col1">
+            <a class="logo header__logo" href="#">
+              <img src="images/svg/logo_white.svg" alt="Max Proff logo" />
+            </a>
+            <div class="footer__pay">
+              Любая форма оплаты
+              <ul class="footer__cards">
+                <li class="footer__card footer__card--wallet">
+                  <span class="sr-only">Оплата через кошелек</span>
+                </li>
+                <li class="footer__card footer__card--sber">
+                  <span class="sr-only">Оплата через сбербанк</span>
+                </li>
+                <li class="footer__card footer__card--visa">
+                  <span class="sr-only">Оплата через Visa</span>
+                </li>
+                <li class="footer__card footer__card--alfa">
+                  <span class="sr-only">Оплата через Альфа банк</span>
+                </li>
+                <li class="footer__card footer__card--master">
+                  <span class="sr-only">Оплата через Master card</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer__col2">
+            <h5 class="footer__title">Наши услуги</h5>
+            <ul class="footer__services">
+              <li class="footer__service"><a href="#">Квартиры</a></li>
+              <li class="footer__service"><a href="#">Коттеджи</a></li>
+              <li class="footer__service"><a href="#">Таунхаусы</a></li>
+              <li class="footer__service"><a href="#">Офисы</a></li>
+              <li class="footer__service">
+                <a href="#">Инженерные системы</a>
+              </li>
+              <li class="footer__service"><a href="#">География работ</a></li>
+            </ul>
+          </div>
+          <ul class="footer__col3">
+            <li class="footer__service"><a href="#">Портфолио </a></li>
+            <li class="footer__service"><a href="#">Стоимость</a></li>
+            <li class="footer__service"><a href="#">Акции</a></li>
+            <li class="footer__service"><a href="#">О компании</a></li>
+            <li class="footer__service"><a href="#">Статьи</a></li>
+            <li class="footer__service"><a href="#">Контакты</a></li>
+          </ul>
+          <ul class="footer__col4">
+            <li class="footer__link">
+              <a class="phone phone--footer" href="tel:+72332222222"
+                >+7 (233) 222-22-22</a
+              >
+              <span class="schedule">08:00 - 22:00, без выходных</span>
+              <a class="footer__call" href="#">Заказать звонок</a>
+            </li>
+            <li class="footer__link footer__link--email">
+              Электронная почта @
+            </li>
+            <li class="footer__link footer__link--address">Адрес</li>
+          </ul>
+        </div>
+        <div class="footer__bottom">
+          <p class="footer__copy">
+            &copy;&nbsp;2021 &laquo;MaxProff&raquo;
+            <a class="footer__rights" href="#">Правовая информация</a>
+          </p>
+          <ul class="footer__media">
+            <li class="footer__item">
+              <a class="footer__social footer__social--facebook" href="#">
+                <span class="sr-only">Перейти в фэйсбук</span>
+              </a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__social footer__social--youtube" href="#"
+                ><span class="sr-only">Перейти в YouTube</span></a
+              >
+            </li>
+            <li class="footer__item">
+              <a class="footer__social footer__social--instagram" href="#"
+                ><span class="sr-only">Перейти в инстаграм</span></a
+              >
+            </li>
+            <li class="footer__item">
+              <a class="footer__social footer__social--telegram" href="#"
+                ><span class="sr-only">Перейти в телеграм</span></a
+              >
+            </li>
+            <li class="footer__item">
+              <a class="footer__social footer__social--vkontakt" href="#"
+                ><span class="sr-only">Перейти в контакт</span></a
+              >
+            </li>
+            <li class="footer__item">
+              <a class="footer__social footer__social--odnoklassniki" href="#"
+                ><span class="sr-only">Перейти в одноклассники</span></a
+              >
+            </li>
+          </ul>
+          <p class="footer__text">
+            Сайт не является публичной офертой и носит информационный характер
+          </p>
+          <p class="footer__map">Карта сайта</p>
+        </div>
+      </div>
+    </footer>
     <script src="js/main.min.js"></script>
   </body>
 </html>

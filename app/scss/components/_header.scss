@@ -1,0 +1,101 @@
+@use "../variables" as *;
+
+.header {
+  &__nav {
+    padding: 23px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__logo {
+    margin-right: 47px;
+    transition: all 0.3s;
+    &:focus {
+      background-color: rgba(255, 255, 255, 0.0001);
+      box-shadow: 0px 0px 0px 3px $color-accent;
+    }
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+    margin-right: 46px;
+  }
+
+  &__link {
+    font-size: 16px;
+    color: inherit;
+    transition: all 0.3s;
+
+    // &:visited {
+    //   color: $color-link--hover;
+    // }
+
+    &:hover {
+      color: $color-link--hover;
+      text-decoration: underline;
+    }
+
+    // &:active {
+    //   color: $color-link--hover;
+    // }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    margin-right: 33px;
+  }
+
+  &__btn {
+    border: 1px solid $color-accent;
+    border-radius: 3px;
+    font-weight: 500;
+    font-size: 16px;
+    color: $color-accent;
+    padding: 13px 22px;
+    transition: all 0.3s;
+    &:hover {
+      background-color: $color-accent;
+      color: #fff;
+    }
+  }
+}
+
+.navigation {
+  font-weight: 500;
+  font-size: 16px;
+  padding: 21px 0;
+  border-top: 1px solid $color-accent;
+  border-bottom: 1px solid $color-accent;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 33px;
+
+  &__item {
+    position: relative;
+    padding-right: 24px;
+  }
+
+  &__link {
+    color: inherit;
+  }
+
+  &__arrow {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    background-image: url("../images/svg/arrow.svg");
+    @extend %bg;
+    width: 14px;
+    height: 8px;
+  }
+}
