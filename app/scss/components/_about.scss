@@ -1,28 +1,26 @@
 @use "../variables" as *;
 
 .about {
-  position: relative;
-
-  &::after {
-    content: "";
-    position: absolute;
-    // @extend %before_after;
-    background-image: url("../images/about_bg.jpg");
-    @extend %bg;
-    width: 100vw;
-    height: 100vh;
-    top: 15vh;
-    bottom: 0;
-    left: 0;
-    z-index: -1;
-    // right: 0;
+  // position: relative;
+  height: 100vh;
+  background-image: url("../images/about_bg.jpg");
+  // @extend %bg;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-bottom: 150px;
+  &__wrap {
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: space-between;
+    position: relative;
   }
 
-  &__wrap {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    position: relative;
+  &__calc {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40vw;
+    border-radius: 7px;
   }
 
   &__left {
@@ -93,14 +91,6 @@
       background-image: url("../images/svg/guarantee.svg");
     }
   }
-
-  &__calc {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 40vw;
-    border-radius: 7px;
-  }
 }
 
 .calc {
@@ -123,7 +113,7 @@
     margin-bottom: 19px;
   }
 
-  & fieldset {
+  & fieldset:not(:last-child) {
     border: none;
     margin-bottom: 18px;
     border-bottom: 1px solid #d6d6d6;
@@ -166,36 +156,41 @@
     display: flex;
     padding-bottom: 18px;
   }
-}
 
-.navigation {
-  font-weight: 500;
-  font-size: 16px;
-  padding: 21px 0;
-  border-top: 1px solid $color-accent;
-  border-bottom: 1px solid $color-accent;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 33px;
+  &__info {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    background-color: $color-additional--light;
+    padding: 17px 0 18px;
+  }
 
   &__item {
-    position: relative;
-    padding-right: 24px;
+    font-size: 16px;
+    color: $color-accent--second;
+    & span {
+      display: block;
+      font-weight: 700;
+      font-size: 18px;
+    }
   }
 
-  &__link {
-    color: inherit;
+  &__contact {
+    margin-top: 19px;
+    display: flex;
+    align-items: center;
+    border: none;
   }
 
-  &__arrow {
-    position: absolute;
-    top: 50%;
-    right: 0;
-    transform: translateY(-50%);
-    background-image: url("../images/svg/arrow.svg");
-    @extend %bg;
-    width: 14px;
-    height: 8px;
+  &__phone {
+    padding: 12px 13px;
+    border: 1px solid #cccccc;
+    max-width: 200px;
+    width: 100%;
+    margin-right: 15px;
+  }
+
+  &__submit {
+    padding-right: 31px;
+    padding-left: 31px;
   }
 }

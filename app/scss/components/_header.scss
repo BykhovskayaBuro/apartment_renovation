@@ -67,3 +67,35 @@
     }
   }
 }
+
+.navigation {
+  font-weight: 500;
+  font-size: 16px;
+  padding: 21px 0;
+  border-top: 1px solid $color-accent;
+  border-bottom: 1px solid $color-accent;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 33px;
+
+  &__item {
+    position: relative;
+    padding-right: 24px;
+  }
+
+  &__link {
+    color: inherit;
+  }
+
+  &__arrow {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    background-image: url("../images/svg/arrow.svg");
+    @extend %bg;
+    width: 14px;
+    height: 8px;
+  }
+}

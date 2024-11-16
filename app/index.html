@@ -42,33 +42,33 @@
           </div>
           <a class="header__btn" href="#">Заказать звонок</a>
         </nav>
+        <nav class="header__navigation">
+          <ul class="navigation">
+            <li class="navigation__item">
+              <a class="navigation__link" href="#">Ремонт квартир</a>
+              <span class="navigation__arrow"></span>
+            </li>
+            <li class="navigation__item">
+              <a class="navigation__link" href="#">Дизайн интерьера</a>
+              <span class="navigation__arrow"></span>
+            </li>
+            <li class="navigation__item">
+              <a class="navigation__link" href="#">Ремонт комнат</a>
+              <span class="navigation__arrow"></span>
+            </li>
+            <li class="navigation__item">
+              <a class="navigation__link" href="#">Дома и коттеджи</a>
+            </li>
+            <li class="navigation__item">
+              <a class="navigation__link" href="#">Прочие услуги</a>
+            </li>
+          </ul>
+        </nav>
       </div>
     </header>
     <main class="main">
       <section class="about">
         <div class="container">
-          <nav class="about__nav">
-            <ul class="navigation">
-              <li class="navigation__item">
-                <a class="navigation__link" href="#">Ремонт квартир</a>
-                <span class="navigation__arrow"></span>
-              </li>
-              <li class="navigation__item">
-                <a class="navigation__link" href="#">Дизайн интерьера</a>
-                <span class="navigation__arrow"></span>
-              </li>
-              <li class="navigation__item">
-                <a class="navigation__link" href="#">Ремонт комнат</a>
-                <span class="navigation__arrow"></span>
-              </li>
-              <li class="navigation__item">
-                <a class="navigation__link" href="#">Дома и коттеджи</a>
-              </li>
-              <li class="navigation__item">
-                <a class="navigation__link" href="#">Прочие услуги</a>
-              </li>
-            </ul>
-          </nav>
           <div class="about__wrap">
             <div class="about__left">
               <h1 class="about__title">РЕМОНТ КВАРТИР В МОСКВЕ И МО</h1>
@@ -166,10 +166,10 @@
                     /><span class="custom-radio"></span> 4</label
                   >
                 </fieldset>
-                <div class="calc__square">
-                  Площадь, м2:
+                <fieldset class="calc__square">
+                  <legend>Площадь, м2:</legend>
                   <input type="range" />
-                </div>
+                </fieldset>
                 <ul class="calc__info">
                   <li class="calc__item">
                     Срок ремонта: <span>до 34 дней</span>
@@ -178,11 +178,20 @@
                     Скидка составит: <span>23 765 руб</span>
                   </li>
                 </ul>
-                <div class="calc__contact">
-                  Введите номер телефона
-                  <input type="phone" placeholder="+7" />
-                  <input class="calc__submit" type="submit" value="Заказать" />
-                </div>
+                <fieldset class="calc__contact">
+                  <legend>Введите номер телефона</legend>
+                  <input
+                    id="phone"
+                    class="calc__phone"
+                    type="phone"
+                    placeholder="+7"
+                  />
+                  <input
+                    class="calc__submit btn"
+                    type="submit"
+                    value="Заказать"
+                  />
+                </fieldset>
               </form>
             </div>
           </div>

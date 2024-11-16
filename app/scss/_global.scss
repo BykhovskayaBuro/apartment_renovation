@@ -29,6 +29,10 @@ body {
   color: color-text--main;
 }
 
+.main {
+  flex-grow: 1;
+}
+
 .container {
   max-width: 1240px;
   margin: 0 auto;
@@ -114,4 +118,11 @@ input[type="radio"]:checked + .custom-radio {
 
 label > input[type="radio"]:checked {
   color: $color-accent--second;
+}
+
+.btn {
+  color: $color-text--second;
+  background-color: $color-accent;
+  padding: 13px 25px;
+  border-radius: 4px;
 }
