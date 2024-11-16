@@ -1,17 +1,12 @@
 @use "../variables" as *;
 
 .about {
-  // position: relative;
   height: 100vh;
   background-image: url("../images/about_bg.jpg");
-  // @extend %bg;
   background-repeat: no-repeat;
   background-size: cover;
   padding-bottom: 150px;
   &__wrap {
-    // display: flex;
-    // flex-direction: column;
-    // justify-content: space-between;
     position: relative;
   }
 
