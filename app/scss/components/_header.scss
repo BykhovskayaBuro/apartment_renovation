@@ -53,19 +53,19 @@
     margin-right: 33px;
   }
 
-  &__btn {
-    border: 1px solid $color-accent;
-    border-radius: 3px;
-    font-weight: 500;
-    font-size: 16px;
-    color: $color-accent;
-    padding: 13px 22px;
-    transition: all 0.3s;
-    &:hover {
-      background-color: $color-accent;
-      color: #fff;
-    }
-  }
+  // &__btn {
+  //   border: 1px solid $color-accent;
+  //   border-radius: 3px;
+  //   font-weight: 500;
+  //   font-size: 16px;
+  //   color: $color-accent;
+  //   padding: 13px 22px;
+  //   transition: all 0.3s;
+  //   &:hover {
+  //     background-color: $color-accent;
+  //     color: #fff;
+  //   }
+  // }
 }
 
 .navigation {

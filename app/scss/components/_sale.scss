@@ -1,0 +1,103 @@
+@use "../variables" as *;
+
+.sale {
+  padding: 66px 0 50px;
+
+  &__title {
+    margin-bottom: 45px;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+  }
+
+  &__link {
+    display: block;
+    @extend %bg;
+    min-height: 490px;
+    min-width: 387px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: 25px;
+    // height: 100%;
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 40px;
+      left: 0;
+      right: 0;
+      height: 209px;
+      background: linear-gradient(
+        360deg,
+        #fff 17.74%,
+        rgba(255, 255, 255, 0) 100%
+      );
+    }
+  }
+
+  &__subtitle {
+    font-weight: 700;
+    font-size: 32px;
+    margin-bottom: 5px;
+    color: $color-text--main;
+    z-index: 2;
+  }
+
+  &__descr {
+    font-size: 16px;
+    margin-bottom: 24px;
+    text-align: center;
+    color: $color-text--main;
+    z-index: 2;
+  }
+
+  &__get {
+    margin-bottom: 16px;
+    z-index: 2;
+  }
+
+  &__btn {
+    padding: 13px 59px;
+    margin: 0 auto;
+    display: block;
+    max-width: 205px;
+    width: 100%;
+    // text-align: center;
+  }
+}
+
+.approach {
+  padding: 57px 0 51px;
+
+  &__title {
+    margin-bottom: 11px;
+  }
+
+  &__descr {
+    font-weight: 300;
+    font-size: 18px;
+    margin: 0 auto 70px;
+    max-width: 50vw;
+    width: 100%;
+    text-align: center;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 18px;
+  }
+
+  &__item {
+    font-weight: 500;
+    font-size: 16px;
+    text-align: center;
+    padding-top: 94px;
+  }
+}
