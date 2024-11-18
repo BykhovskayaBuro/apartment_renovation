@@ -1,0 +1,145 @@
+@use "../variables" as *;
+
+.example {
+  padding-top: 55px;
+  padding-bottom: 60px;
+  background-color: #f8f8f8;
+
+  &__title {
+    margin-bottom: 70px;
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 35px;
+  }
+
+  &__btn {
+    background-color: #e6e6e6;
+    border-radius: 4px;
+    padding: 14px 63px;
+    color: $color-text--calculator;
+    max-width: 237px;
+    width: 100%;
+    font-weight: 700;
+    font-size: 16px;
+
+    &--active {
+      background-color: $color-accent--second;
+      color: $color-text--second;
+    }
+  }
+
+  &__square {
+    display: flex;
+    justify-content: center;
+    // align-items: center;
+    gap: 30px;
+    margin-bottom: 30px;
+  }
+
+  &__label {
+    display: flex;
+    align-items: center;
+    &--checked {
+      font-weight: 700;
+    }
+  }
+
+  &__order {
+    margin: 0 auto;
+    display: block;
+  }
+}
+
+.slider {
+  margin-bottom: 31px;
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+  }
+
+  &__mini {
+    & li:not(:last-child) {
+      padding-bottom: 6px;
+    }
+  }
+
+  &__img-mini {
+    border-radius: 2px;
+    &--active {
+      border: 2px solid $color-text--calculator;
+    }
+  }
+
+  &__inner {
+    display: flex;
+
+    & img {
+      border-radius: 6px;
+    }
+  }
+
+  &__descr {
+    padding: 55px 80px 55px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &__point {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    font-size: 16px;
+    color: $color-text--calculator;
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 6px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 17px;
+      height: 17px;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0;
+      // display: inline-block;
+      @extend %bg;
+    }
+
+    &--sum::before {
+      background-image: url("../images/svg/dollar.svg");
+    }
+    &--square::before {
+      background-image: url("../images/svg/square.svg");
+    }
+    &--deadline::before {
+      background-image: url("../images/svg/calendar.svg");
+    }
+    &--room::before {
+      background-image: url("../images/svg/home.svg");
+    }
+    &--address::before {
+      background-image: url("../images/svg/map.svg");
+    }
+    &--list::before {
+      background-image: url("../images/svg/list.svg");
+    }
+
+    & span {
+      font-weight: 700;
+      color: $color-text--main;
+    }
+  }
+
+  &__works {
+    list-style: circle;
+    margin: 0 auto;
+    & li {
+    }
+  }
+}

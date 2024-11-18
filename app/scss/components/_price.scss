@@ -1,6 +1,7 @@
 @use "../variables" as *;
 .price {
   padding: 73px 0 45px;
+  // margin-bottom: 55px;
 
   &__subtitle {
     margin-bottom: 48px;
@@ -27,6 +28,7 @@
 
   &__title {
     border-bottom: 2px solid $color-accent--second;
+    padding-bottom: 20px;
   }
 
   &__top {
@@ -62,10 +64,13 @@
   &__text {
     font-weight: 300;
     padding: 24px 20px 0 27px;
+    min-height: 145px;
   }
 
   &__btn {
-    margin-bottom: 31px;
+    font-weight: 700;
+    font-size: 18px;
+    margin: 0 auto 30px;
   }
 
   &__service {
@@ -74,6 +79,7 @@
 
   &__services {
     padding: 15px 20px 0 27px;
+    min-height: 185px;
   }
 
   &__subservices {
@@ -103,5 +109,51 @@
         background-image: url("../images/svg/arrow_price_notactive.svg");
       }
     }
+  }
+
+  &__work {
+    font-weight: 700;
+    font-size: 18px;
+    color: $color-accent--second;
+    text-align: center;
+    margin-bottom: 6px;
+
+    &::after {
+      content: "";
+      margin-left: 2px;
+      background-image: url("../images/svg/arrow_down.svg");
+      @extend %bg;
+      width: 12px;
+      height: 12px;
+      display: inline-block;
+    }
+  }
+
+  &__wrap {
+    padding: 0 20px 0 29px;
+  }
+
+  &__old {
+    margin-right: 6px;
+    display: inline-block;
+    margin-bottom: 21px;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      // right: 0;
+      left: 0;
+      transform: translateY(-50%);
+      height: 1px;
+      width: 100%;
+      background-color: currentColor;
+    }
+  }
+
+  &__new {
+    font-weight: 700;
+    font-size: 16px;
+    color: $color-accent;
   }
 }

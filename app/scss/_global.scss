@@ -116,8 +116,14 @@ input[type="radio"]:checked + .custom-radio {
   background-image: url("../images/svg/radio_btn--checked.svg");
 }
 
-label > input[type="radio"]:checked {
-  color: $color-accent--second;
+// input[type="radio"]:checked ~ label,
+// input[type="radio"]:focus ~ label {
+//   color: $color-accent--second;
+// }
+
+input[type="radio"]:checked ~ label {
+  color: blue;
+  font-style: italic;
 }
 
 .btn {
@@ -125,6 +131,15 @@ label > input[type="radio"]:checked {
   background-color: $color-accent;
   padding: 13px 25px;
   border-radius: 4px;
+  transition: all 0.3s;
+
+  &:hover {
+    background-color: $color-btn--hover;
+  }
+
+  &:focus {
+    background-color: $color-btn--active;
+  }
 }
 
 .title {

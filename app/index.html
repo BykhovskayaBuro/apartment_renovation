@@ -93,7 +93,7 @@
               <form class="calc__form" action="#">
                 <fieldset class="calc__type">
                   <legend>Вид ремонта:</legend>
-                  <label for="cosmetic"
+                  <label class="calc__label" for="cosmetic"
                     ><input
                       id="cosmetic"
                       type="radio"
@@ -102,19 +102,19 @@
                     />
                     <span class="custom-radio"></span> Косметический</label
                   >
-                  <label for="capital"
+                  <label class="calc__label" for="capital"
                     ><input id="capital" type="radio" name="cosmetic" /><span
                       class="custom-radio"
                     ></span>
                     Капитальный</label
                   >
-                  <label for="key"
+                  <label class="calc__label" for="key"
                     ><input id="key" type="radio" name="cosmetic" /><span
                       class="custom-radio"
                     ></span>
                     Под ключ</label
                   >
-                  <label for="design"
+                  <label class="calc__label" for="design"
                     ><input id="design" type="radio" name="cosmetic" /><span
                       class="custom-radio"
                     ></span>
@@ -123,11 +123,11 @@
                 </fieldset>
                 <fieldset class="calc__real">
                   <legend>Тип вашей недвижимости:</legend>
-                  <label for="new"
+                  <label class="calc__label" for="new"
                     ><input id="new" type="radio" name="realType" checked />
                     <span class="custom-radio"></span>Новостройка</label
                   >
-                  <label for="second"
+                  <label class="calc__label" for="second"
                     ><input id="second" type="radio" name="realType" /><span
                       class="custom-radio"
                     ></span>
@@ -136,7 +136,7 @@
                 </fieldset>
                 <fieldset class="calc__rooms">
                   <legend>Количество комнат</legend>
-                  <label for="one_room"
+                  <label class="calc__label" for="one_room"
                     ><input
                       id="one_room"
                       type="radio"
@@ -144,7 +144,7 @@
                       checked
                     /><span class="custom-radio"></span> 1</label
                   >
-                  <label for="two_room"
+                  <label class="calc__label" for="two_room"
                     ><input
                       id="two_room"
                       type="radio"
@@ -158,7 +158,7 @@
                       name="roomQuantity"
                     /><span class="custom-radio"></span> 3</label
                   >
-                  <label for="four_room"
+                  <label class="calc__label" for="four_room"
                     ><input
                       id="four_room"
                       type="radio"
@@ -185,6 +185,7 @@
                     class="calc__phone"
                     type="phone"
                     placeholder="+7"
+                    required
                   />
                   <input
                     class="calc__submit btn"
@@ -230,9 +231,11 @@
                   </ul>
                 </li>
               </ul>
-              <button class="price__work">Список работ</button>
-              <span class="price__old">от 3 245 руб/м2</span>
-              <span class="price__new">от 2 450 руб/м2</span>
+              <p class="price__work">Список работ</p>
+              <div class="price__wrap">
+                <span class="price__old">от <b>3 245</b> руб/м2</span>
+                <span class="price__new">от 2 450 руб/м2</span>
+              </div>
               <button class="price__btn btn">Получить смету</button>
             </li>
             <li class="price__item">
@@ -268,9 +271,11 @@
                   </ul>
                 </li>
               </ul>
-              <button class="price__work">Список работ</button>
-              <span class="price__old">от 5 445 руб/м2</span>
-              <span class="price__new">от 4 950 руб/м2</span>
+              <p class="price__work">Список работ</p>
+              <div class="price__wrap">
+                <span class="price__old">от 5 445 руб/м2</span>
+                <span class="price__new">от 4 950 руб/м2</span>
+              </div>
               <button class="price__btn btn">Получить смету</button>
             </li>
             <li class="price__item">
@@ -301,9 +306,11 @@
                   </ul>
                 </li>
               </ul>
-              <button class="price__work">Список работ</button>
-              <span class="price__old">от 5 995 руб/м2</span>
-              <span class="price__new">от 5 450 руб/м2</span>
+              <p class="price__work">Список работ</p>
+              <div class="price__wrap">
+                <span class="price__old">от 5 995 руб/м2</span>
+                <span class="price__new">от 5 450 руб/м2</span>
+              </div>
               <button class="price__btn btn">Получить смету</button>
             </li>
             <li class="price__item">
@@ -335,9 +342,11 @@
                   </ul>
                 </li>
               </ul>
-              <button class="price__work">Список работ</button>
-              <span class="price__old">от 9 800 руб/м2</span>
-              <span class="price__new">от 7 500 руб/м2</span>
+              <p class="price__work">Список работ</p>
+              <div class="price__wrap">
+                <span class="price__old">от 9 800 руб/м2</span>
+                <span class="price__new">от 7 500 руб/м2</span>
+              </div>
               <button class="price__btn btn">Получить смету</button>
             </li>
           </ul>
@@ -346,28 +355,86 @@
       <section class="example">
         <div class="container">
           <h2 class="example__title title">Примеры наших работ</h2>
-          <ul class="example__list">
-            <li class="example__item">Капитальный</li>
-            <li class="example__item">Косметиеский</li>
-            <li class="example__item">Под ключ</li>
-            <li class="example__item">Студии</li>
-            <li class="example__item">Черновой</li>
-          </ul>
-          <div class="example__squere">
-            <input type="radio" name="metr" id="55m2" value="55 м2" />
-            <input type="radio" name="metr" id="61m2" value="61 м2" />
-            <input type="radio" name="metr" id="72m2" value="72 м2" />
-            <input type="radio" name="metr" id="88m2" value="88 м2" />
-            <input type="radio" name="metr" id="106m2" value="106 м2" />
-            <input type="radio" name="metr" id="63m2" value="63 м2" />
-            <input type="radio" name="metr" id="41m2" value="41 м2" />
+          <div class="example__buttons">
+            <button class="example__btn example__btn--active">
+              Капитальный
+            </button>
+            <button class="example__btn">Косметический</button>
+            <button class="example__btn">Под ключ</button>
+            <button class="example__btn">Студии</button>
+            <button class="example__btn">Черновой</button>
+          </div>
+          <div class="example__square">
+            <label class="example__label" for="55m2"
+              ><input
+                class="example__input"
+                type="radio"
+                name="metr"
+                id="55m2"
+                value="55 м2"
+              /><span class="custom-radio"></span> 55 м2</label
+            >
+            <label class="example__label" for="61m2"
+              ><input
+                class="example__input"
+                type="radio"
+                name="metr"
+                id="61m2"
+                value="61 м2"
+              /><span class="custom-radio"></span>61 м2</label
+            >
+            <label class="example__label" for="72m2"
+              ><input
+                class="example__input"
+                type="radio"
+                name="metr"
+                id="72m2"
+                value="72 м2"
+              /><span class="custom-radio"></span>72 м2</label
+            >
+            <label class="example__label" for="88m2"
+              ><input
+                class="example__input"
+                type="radio"
+                name="metr"
+                id="88m2"
+                value="88 м2"
+              /><span class="custom-radio"></span>88 м2</label
+            >
+            <label class="example__label" for="106m2"
+              ><input
+                class="example__input"
+                type="radio"
+                name="metr"
+                id="106m2"
+                value="106 м2"
+              /><span class="custom-radio"></span>106 м2</label
+            >
+            <label class="example__label" for="63m2"
+              ><input
+                class="example__input"
+                type="radio"
+                name="metr"
+                id="63m2"
+                value="63 м2"
+              /><span class="custom-radio"></span>63 м2</label
+            >
+            <label class="example__label" for="41m2"
+              ><input
+                class="example__input"
+                type="radio"
+                name="metr"
+                id="41m2"
+                value="41 м2"
+              /><span class="custom-radio"></span>41 м2</label
+            >
           </div>
           <div class="slider">
             <div class="slider__item">
               <ul class="slider__mini">
                 <li>
                   <img
-                    class="slider__img-mini"
+                    class="slider__img-mini slider__img-mini--active"
                     src="images/slider_mini_1.jpg"
                     alt="Interier first view"
                   />
@@ -406,37 +473,39 @@
                 <div class="slider__descr">
                   <ul class="slider__data">
                     <li class="slider__point slider__point--sum">
-                      Сумма: 272 250 руб.
+                      Сумма: <span>272 250 руб.</span>
                     </li>
-                    <li class="slider__point slider__point--squere">
-                      Площадь: 43 м2
+                    <li class="slider__point slider__point--square">
+                      Площадь: <span>43 м2</span>
                     </li>
                     <li class="slider__point slider__point--deadline">
-                      Срок: 90 дней
+                      Срок: <span>90 дней</span>
                     </li>
-                    <li class="slider__point slider__point--room">Комнат: 3</li>
+                    <li class="slider__point slider__point--room">
+                      Комнат: <span>3</span>
+                    </li>
                     <li class="slider__point slider__point--address">
-                      Адрес: Кулика 18
+                      Адрес: <span>Кулика 18</span>
                     </li>
                     <li class="slider__point slider__point--list">
-                      <ul>
-                        Перечень работ:
-                        <li>Штукатурка стен по маякам</li>
-                        <li>Грунтовка стен и потолка</li>
-                        <li>Монтаж натяжных потолков</li>
-                        <li>Шпатлёвка стен под обои</li>
-                        <li>Окраске стен</li>
-                        <li>Укладка плитки в с/у</li>
-                        <li>Прокладка электрики</li>
-                        <li>Установка плинтусов и откосов</li>
-                      </ul>
+                      Перечень работ:
                     </li>
+                  </ul>
+                  <ul class="slider__works">
+                    <li>Штукатурка стен по маякам</li>
+                    <li>Грунтовка стен и потолка</li>
+                    <li>Монтаж натяжных потолков</li>
+                    <li>Шпатлёвка стен под обои</li>
+                    <li>Окраске стен</li>
+                    <li>Укладка плитки в с/у</li>
+                    <li>Прокладка электрики</li>
+                    <li>Установка плинтусов и откосов</li>
                   </ul>
                 </div>
               </div>
             </div>
-            <button class="slider__btn btn">Оставить заявку</button>
           </div>
+          <button class="example__order btn">Оставить заявку</button>
         </div>
       </section>
       <section class="sale">

@@ -114,10 +114,13 @@
     border-bottom: 1px solid #d6d6d6;
   }
 
-  & label {
+  &__label {
     font-size: 14px;
     display: flex;
     align-items: center;
+    &--active {
+      color: $color-accent--second;
+    }
   }
 
   &__rooms {

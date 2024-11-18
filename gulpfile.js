@@ -114,8 +114,8 @@ function watching() {
   watch("app/**/*.html").on("change", series(reload));
   watch("app/scss/**/*.scss", styles);
   watch("app/images/**/*", images);
-  // watch("app/js/**/*.js", scripts);
+  watch("app/js/**/*.js", scripts);
 }
 
 export const build = series(cleanDist, images, buildDist);
-export const start = parallel(styles, scripts, server, watching);
+export const start = parallel(styles, scripts, serve, watching);
