@@ -61,7 +61,11 @@ function styles() {
 
 function scripts() {
   console.log("Compiling scripts...");
-  return src(["node_modules/jquery/dist/jquery.js", "app/js/main.js"])
+  return src([
+    "node_modules/jquery/dist/jquery.js",
+    "node_modules/ion-rangeslider/js/ion.rangeSlider.js",
+    "app/js/main.js",
+  ])
     .pipe(concat("main.min.js"))
     .pipe(
       terser().on("error", function (err) {
@@ -114,7 +118,7 @@ function watching() {
   watch("app/**/*.html").on("change", series(reload));
   watch("app/scss/**/*.scss", styles);
   watch("app/images/**/*", images);
-  watch("app/js/**/*.js", scripts);
+  // watch("app/js/**/*.js", scripts);
 }
 
 export const build = series(cleanDist, images, buildDist);

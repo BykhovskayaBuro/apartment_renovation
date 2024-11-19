@@ -203,4 +203,20 @@
     padding-right: 31px;
     padding-left: 31px;
   }
+
+  &__square {
+    position: relative;
+    & legend {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.js-range-slider__to {
+  position: absolute;
+  top: 15px;
+  right: 5px;
+  font-weight: 700;
+  font-size: 14px;
+  color: $color-text--calculator;
 }

@@ -23,3 +23,16 @@ exampleInputs.forEach((input, index) => {
 //     parent.classList.add("calc__label--active");
 //   }
 // });
+
+$(".js-range-slider").ionRangeSlider({
+  type: "single",
+  min: 0,
+  max: 200,
+  from: 35,
+  onStart: function (data) {
+    $(".js-range-slider__to").text(data.from);
+  },
+  onChange: function (data) {
+    $(".js-range-slider__to").text(data.from);
+  },
+});

@@ -161,3 +161,64 @@ input[type="radio"]:checked ~ label {
     color: #fff;
   }
 }
+
+// style for range in the calculator
+.irs {
+  max-width: 91%;
+  width: 100%;
+  &--flat {
+    margin-bottom: 25px;
+  }
+  &-min,
+  &-max {
+    display: none;
+  }
+  &-line {
+    // max-width: 80%;
+    width: 100%;
+  }
+
+  &--flat &-line {
+    background-color: #f2f2f2;
+    height: 6px;
+    border-radius: 3px;
+  }
+
+  &--flat &-bar {
+    background-color: $color-accent--second;
+    height: 6px;
+    border-radius: 3px;
+  }
+
+  &--flat &-handle {
+    top: 15px;
+    border: 2px solid $color-text--second;
+    width: 26px;
+    height: 26px;
+    border-radius: 100%;
+    background-color: $color-accent--second;
+  }
+
+  &--flat &-handle > i:first-child {
+    display: none;
+  }
+
+  &--flat &-single {
+    // background-color: transparent;
+    // top: -4px;
+    // padding: 1px 3px;
+    display: none;
+    &::before {
+      display: none;
+    }
+  }
+}
+
+.js-range-slider__to {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-weight: 700;
+  font-size: 14px;
+  color: $color-text--calculator;
+}
