@@ -6,6 +6,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   padding-bottom: 150px;
+
   &__wrap {
     position: relative;
   }
@@ -158,7 +159,6 @@
   &__info {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    // background-color: $color-additional--light;
     padding: 17px 0 18px;
     position: relative;
     z-index: 1;

@@ -24,6 +24,8 @@ exampleInputs.forEach((input, index) => {
 //   }
 // });
 
+//ionRangeSlider, slider in the calculator(section 'About')
+
 $(".js-range-slider").ionRangeSlider({
   type: "single",
   min: 0,
