@@ -594,15 +594,20 @@
             Свой склад и шоурум материалов наших партнеров в Москве
           </h2>
           <ul class="showroom__list">
-            <li class="showromm__item">Прямой договор с поставщиками</li>
-            <li class="showromm__item">Доставка и подьём в квартиру</li>
-            <li class="showromm__item">
+            <li class="showroom__item showroom__item--agreement">
+              Прямой договор с поставщиками
+            </li>
+            <li class="showroom__item showroom__item--delivery">
+              Доставка и подьём в квартиру
+            </li>
+            <li class="showroom__item showroom__item--decor">
               300 тонн черновых и чистовых материалов
             </li>
-            <li class="showromm__item">
-              250 видов обоев 25 видов ламината 50 видов плитки и плинтуса
+            <li class="showroom__item showroom__item--materials">
+              250 видов обоев <span>25 видов ламината</span> 50 видов плитки и
+              плинтуса
             </li>
-            <li class="showromm__item">
+            <li class="showroom__item showroom__item--catalog">
               Выезд специалиста с каталогом материалов
             </li>
           </ul>
@@ -620,12 +625,18 @@
             качества:
           </p>
           <div class="control__wrap">
-            <img src="images/masters.jpg" alt="Proffesional workers" />
+            <div class="control__img-wrap">
+              <img
+                class="control__img"
+                src="images/masters.jpg"
+                alt="Proffesional workers"
+              />
+            </div>
             <ul class="control__list">
               <li class="control__item">
-                <span class="control__num"
-                  ><span class="control__accent">01</span>/05</span
-                >
+                <div class="control__num">
+                  <span class="control__accent">01</span>/05
+                </div>
                 <p class="control__subtitle">Главный инженер</p>
                 <p class="control__text">
                   Наблюдает за работой в режиме реального времени. Проверяет
@@ -633,9 +644,9 @@
                 </p>
               </li>
               <li class="control__item">
-                <span class="control__num"
-                  ><span class="control__accent">02</span>/05</span
-                >
+                <div class="control__num">
+                  <span class="control__accent">02</span>/05
+                </div>
                 <p class="control__subtitle">Отдел технического конроля</p>
                 <p class="control__text">
                   Проверяет качество работ на всех объектах-решает спорные
@@ -643,16 +654,16 @@
                 </p>
               </li>
               <li class="control__item">
-                <span class="control__num"
-                  ><span class="control__accent">03</span>/05</span
-                >
+                <div class="control__num">
+                  <span class="control__accent">03</span>/05
+                </div>
                 <p class="control__subtitle">Видео и фото контроль</p>
                 <p class="control__text">Онлайн-контроль хода ремонта 24/7</p>
               </li>
               <li class="control__item">
-                <span class="control__num"
-                  ><span class="control__accent">04</span>/05</span
-                >
+                <div class="control__num">
+                  <span class="control__accent">04</span>/05
+                </div>
                 <p class="control__subtitle">Начальник участка</p>
                 <p class="control__text">
                   Оценивает соответствие процесса ремонта условиям договора по
@@ -660,9 +671,9 @@
                 </p>
               </li>
               <li class="control__item">
-                <span class="control__num"
-                  ><span class="control__accent">05</span>/05</span
-                >
+                <div class="control__num">
+                  <span class="control__accent">05</span>/05
+                </div>
                 <p class="control__subtitle">Прораб</p>
                 <p class="control__text">
                   Приезжает на объект 4-5 раз в неделю, контролирует работу
@@ -671,54 +682,131 @@
               </li>
             </ul>
           </div>
+          <div class="control__bottom advantages">
+            <h2 class="advantages__title title">Наши преимущества</h2>
+            <ul class="advantages__list">
+              <li class="advantages__item advantages__item--pay">
+                <p class="advantages__subtitle">Работа без предоплаты</p>
+                <p class="advantages__descr">
+                  Мы не берём предоплату. Вы платите за каждый этап работ после
+                  подписания акта.
+                </p>
+              </li>
+              <li class="advantages__item advantages__item--price">
+                <p class="advantages__subtitle">
+                  Стоимость ремонта не меняется
+                </p>
+                <p class="advantages__descr">
+                  Прозрачный бюджет. Финальная смета фиксируется в согласованных
+                  актах.
+                </p>
+              </li>
+              <li class="advantages__item advantages__item--masters">
+                <p class="advantages__subtitle">
+                  Мастера-славяне с опытом от 5 лет
+                </p>
+                <p class="advantages__descr">
+                  Мастера - славяне. В штате 250 мастеров с опытом работы от 5
+                  лет, 20 прорабов с опытом от 8 лет и инженерным образованием.
+                </p>
+              </li>
+              <li class="advantages__item advantages__item--result">
+                <p class="advantages__subtitle">За нами не переделывают</p>
+                <p class="advantages__descr">
+                  Качество работ для нас в приоритете. Даём гарантию на все виды
+                  работ.
+                </p>
+              </li>
+            </ul>
+          </div>
         </div>
       </section>
-      <section class="advantages">
+      <section class="feedback">
         <div class="container">
-          <h2 class="advantages__title title">Наши преимущества</h2>
-          <ul class="advantages__list">
-            <li class="advantages__item">
-              <p class="advantages__subtitle">Работа без предоплаты</p>
-              <p class="advantages__subtitle">
-                Мы не берём предоплату. Вы платите за каждый этап работ после
-                подписания акта.
-              </p>
+          <h2 class="feedback__title title">Отзывы</h2>
+          <ul class="feedback__list">
+            <li class="feedback__item">
+              <a
+                class="feedback__video"
+                href="#"
+                style="background-image: url('images/slider_1.jpg')"
+              ></a>
+              <div class="feedback__descr">
+                <p class="feedback__text">
+                  <span class="feedback__accent">Капитальный ремонт </span
+                  >2х-комнтаная квартира <p class="feedback__address">
+                    Москва, р-н Фили-Давыдково, Малая
+                    Филевская улица, 68
+                  </p>
+                </p>
+              </div>
             </li>
-            <li class="advantages__item">
-              <p class="advantages__subtitle">Стоимость ремонта не меняется</p>
-              <p class="advantages__subtitle">
-                Прозрачный бюджет. Финальная смета фиксируется в согласованных
-                актах.
-              </p>
+            <li class="feedback__item">
+              <a
+                class="feedback__video"
+                href="#"
+                style="background-image: url('images/slider_1.jpg')"
+              ></a>
+              <div class="feedback__descr">
+                <p class="feedback__text">
+                  <span class="feedback__accent">Капитальный ремонт </span
+                  >2х-комнтаная квартира <p class="feedback__address">
+                    Москва, р-н Фили-Давыдково, Малая
+                    Филевская улица, 68
+                  </p>
+                </p>
+              </div>
             </li>
-            <li class="advantages__item">
-              <p class="advantages__subtitle">
-                Мастера-славяне с опытом от 5 лет
-              </p>
-              <p class="advantages__subtitle">
-                Мастера - славяне. В штате 250 мастеров с опытом работы от 5
-                лет, 20 прорабов с опытом от 8 лет и инженерным образованием.
-              </p>
+            <li class="feedback__item">
+              <a
+                class="feedback__video"
+                href="#"
+                style="background-image: url('images/slider_1.jpg')"
+              ></a>
+              <div class="feedback__descr">
+                <p class="feedback__text">
+                  <span class="feedback__accent">Капитальный ремонт </span
+                  >2х-комнтаная квартира <p class="feedback__address">
+                    Москва, р-н Фили-Давыдково, Малая
+                    Филевская улица, 68
+                  </p>
+                </p>
+              </div>
             </li>
-            <li class="advantages__item">
-              <p class="advantages__subtitle">За нами не переделывают</p>
-              <p class="advantages__subtitle">
-                Качество работ для нас в приоритете. Даём гарантию на все виды
-                работ.
-              </p>
+            <li class="feedback__item">
+              <a
+                class="feedback__video"
+                href="#"
+                style="background-image: url('images/slider_1.jpg')"
+              >
+            <span class="sr-only">Посмотреть видео с отзывом</span></a>
+              <div class="feedback__descr">
+                <p class="feedback__text">
+                  <span class="feedback__accent">Капитальный ремонт </span
+                  >2х-комнтаная квартира <p class="feedback__address">
+                    Москва, р-н Фили-Давыдково, Малая
+                    Филевская улица, 68
+                  </p>
+                </p>
+              </div>
             </li>
           </ul>
         </div>
       </section>
-      <section class="opinions">
-        <div class="container">
-          <h2 class="opinions__title title">Отзывы</h2>
-          <ul class="opinions__list">
-            <li class="opinions__item">
-              <video class="opinions__video" src=""></video>
-            </li>
-          </ul>
-        </div>
+      <section class="team">
+        <div class="container"></div>
+      </section>
+      <section class="master-work">
+        <div class="container"></div>
+      </section>
+      <section class="youtube">
+        <div class="container"></div>
+      </section>
+      <section class="supplier">
+        <div class="container"></div>
+      </section>
+      <section class="questions">
+        <div class="container"></div>
       </section>
     </main>
     <footer class="footer">

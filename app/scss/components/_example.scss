@@ -3,7 +3,7 @@
 .example {
   padding-top: 55px;
   padding-bottom: 60px;
-  background-color: #f8f8f8;
+  background-color: $color-bg;
 
   &__title {
     margin-bottom: 70px;
@@ -80,6 +80,7 @@
 
     & img {
       border-radius: 6px;
+      @extend %bg;
     }
   }
 
