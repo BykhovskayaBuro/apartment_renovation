@@ -1,0 +1,180 @@
+@use "../variables" as *;
+
+.sale {
+  padding: 66px 0 50px;
+
+  &__title {
+    margin-bottom: 45px;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+  }
+
+  &__link {
+    display: block;
+    @extend %bg;
+    min-height: 490px;
+    min-width: 387px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: 25px;
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 40px;
+      left: 0;
+      right: 0;
+      height: 209px;
+      background: linear-gradient(
+        360deg,
+        #fff 17.74%,
+        rgba(255, 255, 255, 0) 100%
+      );
+    }
+  }
+
+  &__subtitle {
+    font-weight: 700;
+    font-size: 32px;
+    margin-bottom: 5px;
+    color: $color-text--main;
+    z-index: 2;
+  }
+
+  &__descr {
+    font-size: 16px;
+    margin-bottom: 24px;
+    text-align: center;
+    color: $color-text--main;
+    z-index: 2;
+  }
+
+  &__get {
+    margin-bottom: 16px;
+    z-index: 2;
+  }
+
+  &__btn {
+    padding: 13px 59px;
+    margin: 0 auto;
+    display: block;
+    max-width: 205px;
+    width: 100%;
+  }
+}
+
+.approach {
+  padding: 57px 0 51px;
+
+  &__title {
+    margin-bottom: 11px;
+  }
+
+  &__descr {
+    font-weight: 300;
+    font-size: 18px;
+    margin: 0 auto 70px;
+    max-width: 50vw;
+    width: 100%;
+    text-align: center;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    // margin-bottom: 18px;
+    position: relative;
+    &::after {
+      @extend %before_after;
+      bottom: 9px;
+      left: 0;
+      right: 0;
+      width: 100%;
+      height: 6px;
+      background-color: $color-additional--light;
+      border-radius: 3px;
+    }
+  }
+
+  &__item {
+    font-weight: 500;
+    font-size: 16px;
+    text-align: center;
+    padding-top: 94px;
+    padding-bottom: 44px;
+    max-width: 107px;
+    width: 100%;
+    position: relative;
+
+    &--smeta {
+      max-width: 95px;
+    }
+
+    &--control {
+      max-width: 147px;
+    }
+
+    &::before {
+      @extend %before_after;
+      width: 70px;
+      height: 70px;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      @extend %bg;
+    }
+
+    &--worker::before {
+      height: 76px;
+      background-image: url("../images/svg/worker.svg");
+    }
+
+    &--smeta::before {
+      background-image: url("../images/svg/smeta.svg");
+    }
+
+    &--agreement::before {
+      background-image: url("../images/svg/agreement.svg");
+    }
+
+    &--check::before {
+      background-image: url("../images/svg/check.svg");
+    }
+
+    &--control::before {
+      background-image: url("../images/svg/control.svg");
+    }
+
+    &--act::before {
+      background-image: url("../images/svg/act.svg");
+    }
+
+    &--hands::before {
+      background-image: url("../images/svg/hands.svg");
+    }
+
+    &--guarantee::before {
+      background-image: url("../images/svg/guarantee.svg");
+    }
+
+    &::after {
+      @extend %before_after;
+      width: 26px;
+      height: 26px;
+      background-color: $color-additional--light;
+      border-radius: 100%;
+      border: 2px solid $color-text--second;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: 0;
+      z-index: 2;
+    }
+  }
+}

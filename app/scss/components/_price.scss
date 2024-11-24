@@ -1,3 +1,159 @@
+@use "../variables" as *;
 .price {
   padding: 73px 0 45px;
+  // margin-bottom: 55px;
+
+  &__subtitle {
+    margin-bottom: 48px;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    // max-width: ;
+  }
+
+  &__item {
+    // background-color: aqua;
+    border-radius: 16px;
+    // padding: 0 20px 31px 27px;
+    max-width: 285px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 0 10px 0 rgba(147, 147, 147, 0.25);
+  }
+
+  &__title {
+    border-bottom: 2px solid $color-accent--second;
+    padding-bottom: 20px;
+  }
+
+  &__top {
+    padding: 22px 0 20px 88px;
+    font-weight: 700;
+    background-color: #e3eaef;
+    border-radius: 16px 16px 0 0;
+    position: relative;
+
+    & span {
+      display: block;
+      font-weight: 700;
+      font-size: 18px;
+      text-transform: uppercase;
+      color: $color-accent;
+      padding-top: 4px;
+    }
+
+    &::before {
+      content: "";
+      background-image: url("../images/slider_1.jpg");
+      @extend %bg;
+      width: 57px;
+      height: 57px;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 27px;
+      border-radius: 50%;
+    }
+  }
+
+  &__text {
+    font-weight: 300;
+    padding: 24px 20px 0 27px;
+    min-height: 145px;
+  }
+
+  &__btn {
+    font-weight: 700;
+    font-size: 18px;
+    margin: 0 auto 30px;
+  }
+
+  &__service {
+    font-weight: 700;
+  }
+
+  &__services {
+    padding: 15px 20px 0 27px;
+    min-height: 185px;
+  }
+
+  &__subservices {
+    margin-bottom: 18px;
+  }
+
+  &__subservice {
+    font-weight: 400;
+    padding-left: 17px;
+    position: relative;
+
+    &::after {
+      position: absolute;
+      content: "";
+      background-image: url("../images/svg/arrow_price.svg");
+      @extend %bg;
+      transform: translateY(-50%);
+      top: 50%;
+      left: 0;
+      width: 13px;
+      height: 13px;
+    }
+
+    &--notActive {
+      color: $color-additional--dark;
+      &::after {
+        background-image: url("../images/svg/arrow_price_notactive.svg");
+      }
+    }
+  }
+
+  &__work {
+    font-weight: 700;
+    font-size: 18px;
+    color: $color-accent--second;
+    text-align: center;
+    margin-bottom: 6px;
+
+    &::after {
+      content: "";
+      margin-left: 2px;
+      background-image: url("../images/svg/arrow_down.svg");
+      @extend %bg;
+      width: 12px;
+      height: 12px;
+      display: inline-block;
+    }
+  }
+
+  &__wrap {
+    padding: 0 20px 0 29px;
+  }
+
+  &__old {
+    margin-right: 6px;
+    display: inline-block;
+    margin-bottom: 21px;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      // right: 0;
+      left: 0;
+      transform: translateY(-50%);
+      height: 1px;
+      width: 100%;
+      background-color: currentColor;
+    }
+  }
+
+  &__new {
+    font-weight: 700;
+    font-size: 16px;
+    color: $color-accent;
+  }
 }

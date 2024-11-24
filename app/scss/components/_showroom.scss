@@ -1,0 +1,82 @@
+@use "../variables" as *;
+
+.showroom {
+  background-color: $color-bg;
+  padding: 55px 0 60px;
+  text-align: center;
+
+  &__title {
+    max-width: 830px;
+    width: 100%;
+    margin: 0 auto 25px;
+  }
+
+  &__list {
+    margin-bottom: 34px;
+    background-color: $color-text--second;
+    box-shadow: 0 0 10px 0 rgba(192, 192, 192, 0.25);
+    border-radius: 6px;
+    padding: 50px 16px 25px 19px;
+    display: flex;
+    justify-content: space-between;
+    gap: 53px;
+  }
+
+  &__item {
+    padding-top: 52px;
+    text-align: left;
+    font-weight: 500;
+    font-size: 16px;
+    position: relative;
+    & span {
+      display: block;
+    }
+    &::before {
+      @extend %before_after;
+      width: 46px;
+      height: 46px;
+      @extend %bg;
+      left: 0;
+      top: 0;
+    }
+    &--agreement::before {
+      background-image: url("../images/svg/agreement.svg");
+    }
+
+    &--delivery {
+      max-width: 155px;
+      width: 100%;
+      &::before {
+        background-image: url("../images/svg/delivery.svg");
+      }
+    }
+
+    &--decor::before {
+      background-image: url("../images/svg/decor.svg");
+    }
+
+    &--materials {
+      max-width: 239px;
+      width: 100%;
+      &::before {
+        top: 10px;
+        width: 36px;
+        height: 36px;
+        background-image: url("../images/svg/materials.svg");
+      }
+    }
+
+    &--catalog::before {
+      top: 10px;
+      width: 36px;
+      height: 36px;
+      background-image: url("../images/svg/catalog.svg");
+    }
+  }
+
+  &__images {
+    display: flex;
+    gap: 16px;
+    justify-content: space-between;
+  }
+}
